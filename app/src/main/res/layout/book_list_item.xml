@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/book_list_item_height"
+    android:paddingTop="@dimen/padding_large"
+    android:paddingRight="@dimen/padding_large">
+
+    <ImageView
+        android:id="@+id/img_book_cover"
+        android:layout_width="100dp"
+        android:layout_height="128dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="31dp"
+        android:layout_marginRight="@dimen/padding_large"
+        android:scaleType="centerCrop" />
+
+    <TextView android:id="@+id/txt_book_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/img_book_cover"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color_title"
+        android:letterSpacing="0.03"
+        tools:text="Book title"/>
+
+    <TextView
+        android:id="@+id/txt_book_authors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_book_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@id/img_book_cover"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/text_color_gray"
+        android:textSize="14sp"
+        tools:text="authors authors authors authors authors authors" />
+
+    <TextView android:id="@+id/txt_book_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/img_book_cover"
+        android:layout_below="@id/txt_book_authors"
+        android:layout_marginTop="@dimen/padding_large"
+        android:textColor="@color/text_color_gray"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="2000"/>
+
+    <TextView android:id="@+id/txt_book_publisher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/txt_book_year"
+        android:layout_below="@id/txt_book_authors"
+        android:layout_marginTop="@dimen/padding_large"
+        android:layout_marginLeft="@dimen/padding_large"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/text_color_gray"
+        android:textSize="14sp"
+        tools:text="Publisher" />
+
+    <TextView android:id="@+id/book_isbn_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/img_book_cover"
+        android:layout_below="@id/img_book_cover"
+        android:layout_marginTop="@dimen/padding_small"
+        android:textSize="12sp"
+        android:textColor="@color/text_color_gray"
+        android:text="@string/property_isbn"/>
+
+    <TextView android:id="@+id/book_isbn_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_book_cover"
+        android:layout_toRightOf="@id/img_book_cover"
+        android:layout_marginTop="@dimen/padding_small"
+        android:textSize="12sp"
+        android:textColor="@color/text_color_light"
+        tools:text="dfhakfaaksduhask"/>
+
+    <View
+        style="@style/divider"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
