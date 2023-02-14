@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.android.extensions'
 }
 
 android {
@@ -9,12 +10,14 @@ android {
 
     defaultConfig {
         applicationId "cam.alperez.samples.onlineonlyapiktx"
-        minSdk 23
+        minSdk 24
         targetSdk 33
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', 'BACKEND_API_URL', "\"https://run.mocky.io\""
     }
 
     buildTypes {
